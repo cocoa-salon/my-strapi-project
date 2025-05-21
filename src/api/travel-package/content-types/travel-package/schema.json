@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travel_packages",
+  "info": {
+    "singularName": "travel-package",
+    "pluralName": "travel-packages",
+    "displayName": "TravelPackage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "startDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "endDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "price": {
+      "required": true,
+      "type": "decimal"
+    },
+    "minParticipants": {
+      "type": "integer",
+      "required": true
+    },
+    "maxParticipants": {
+      "type": "integer"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "includes": {
+      "type": "string"
+    },
+    "excludes": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "travel_packages"
+    }
+  }
+}
