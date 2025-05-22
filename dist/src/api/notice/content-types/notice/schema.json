@@ -1,0 +1,31 @@
+{
+    "kind": "collectionType",
+    "collectionName": "notices",
+    "info": {
+        "singularName": "notice",
+        "pluralName": "notices",
+        "displayName": "Notice",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "content": {
+            "type": "blocks",
+            "required": true
+        },
+        "isImportant": {
+            "type": "boolean",
+            "required": true
+        },
+        "isVisible": {
+            "type": "boolean",
+            "required": true
+        }
+    }
+}

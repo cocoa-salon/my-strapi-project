@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "Faq",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "blocks",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "reservation",
+        "payment",
+        "travel",
+        "membership",
+        "register"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    },
+    "isPublished": {
+      "type": "boolean"
+    }
+  }
+}
